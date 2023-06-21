@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dk.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form onsubmit="xuLyDangKy()">
+                <h3>Tạo tài khoản</h3>
+                <input type="text" id="name" placeholder="Name" required oninput="check1()">
+                <p id="text1">Không nhiều hơn 30 kí tự</p>
+                <input type="text" id="Username" placeholder="UserName" required oninput="check2()">
+                <p id="text2">Không nhiều hơn 15 kí tự</p>
+                <input type="email" id="gmail" placeholder="Email" required>
+                <input type="text" id="CMND" placeholder="CMMD" required oninput="check4()">
+                <p id="text4">Đúng 12 số</p>
+                <input type="tel" id="phone" name="phone" placeholder="Phone number" required oninput="check5()">
+                <input type="text" id="DiaChi" placeholder="Address">
+                <input type="password" id="password" placeholder="Password" required oninput="check6(),check7()">
+                <p id="text6">cần có chữ thường,chữ hoa, kí tự đặc biệt, số, ít nhất 7 kí tự</p>
+                <input type="Confir-password" id="Confir-password" placeholder="Confirm password" required oninput="check7()">
+                <p id="text7"></p>
+                <div class="cb"><input type="checkbox"><div class="t">Tôi đã đọc và đồng ý với các <a href="#">Điều khoảng dịch vụ</a> & <a href="#">Chính sách bảo mật.</a></div></div>
+                <button type="submit">Đăng ký</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form onsubmit="xuLyDangNhap(event)">
+                <h3>Đăng nhập</h3>
+                <input type="email" id="email1" placeholder="Email" />
+                <input type="password" id="password1" placeholder="Password" />
+                <div class="cb"><input type="checkbox" id="rememberMe" onclick="lsRememberMe()"><div class="t1">Lưu mật khẩu</div></div>
+                <button type="submit" >Đăng nhập</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Đã có tài khoản!</h1>
+                    <p>Đăng nhập tại đây</p>
+                    <button class="ghost" id="signIn">Đăng nhập</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Chào bạn!</h1>
+                    <p>Hãy tham gia cũng với chúng tôi</p>
+                    <button class="ghost" id="signUp">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/dk.js"></script>
+</body>
+</html>
